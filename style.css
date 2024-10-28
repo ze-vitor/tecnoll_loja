@@ -7,10 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: rgb(225, 226, 226);
 }
+
 
 header {
     padding: 16px 0;
@@ -18,10 +18,8 @@ header {
     color: aliceblue;
 }
 
-section,
-footer {
+section {
     font-family: "Afacad Flux", sans-serif;
-    font-weight: normal;
 }
 
 header h1,
@@ -32,7 +30,6 @@ header nav li a {
     font-weight: normal;
 }
 
-/* Navegação */
 header nav li {
     display: inline;
     margin-left: 16px;
@@ -48,17 +45,12 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Container Responsivo */
 .container {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* Seções */
 header .container,
 section .container {
     display: flex;
@@ -66,8 +58,8 @@ section .container {
     justify-content: space-between;
 }
 
-.brand-list img {
-    height: 47px;
+.brand-list img{
+    height: 40px;
 }
 
 .brand-list li {
@@ -81,13 +73,15 @@ section .container {
 
 section {
     padding: 24px 0;
-    color: rgb(17, 9, 73);
 }
 
-section h2 {
+section h2{
     margin-bottom: 16px;
 }
 
+section {
+    color: rgb(17, 9, 73);
+}
 section p {
     margin-bottom: 8px;
 }
@@ -109,12 +103,11 @@ section p {
     text-decoration: none;
 }
 
-/* Formulário de Contato */
 #contact .container {
     display: block;
 }
 
-.contact-methods {
+.contac-methods {
     display: flex;
     justify-content: space-between;
 }
@@ -123,8 +116,7 @@ form input,
 form textarea,
 form button {
     display: block;
-    width: 100%; /* Alterado para 100% */
-    max-width: 320px; /* Define uma largura máxima */
+    width: 320px;
     margin-bottom: 8px;
     padding: 8px;
 }
@@ -158,61 +150,5 @@ footer {
     background-color: #085a33;
     color: #fff;
     padding: 16px 0;
-}
 
-/* --- Media Queries para Responsividade --- */
-
-/* Tablets */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 0 16px; /* Adiciona espaçamento lateral */
-    }
-
-    .contact-methods {
-        flex-direction: column; /* Ajusta layout do formulário em dispositivos menores */
-    }
-
-    header nav li {
-        display: block;
-        margin: 8px 0;
-        font-size: 16px; /* Reduz tamanho da fonte para tablets */
-    }
-}
-
-/* Celulares */
-@media (max-width: 480px) {
-    header {
-        text-align: center;
-    }
-
-    header nav li {
-        margin-left: 0;
-    }
-
-    .brand-list li,
-    .social-links li {
-        display: block;
-        text-align: center;
-        margin: 8px 0;
-    }
-
-    .store-front {
-        margin-right: 0;
-    }
-
-    section h2, section h3 {
-        font-size: 1.2em; /* Reduz tamanho dos títulos */
-    }
-
-    form input,
-    form textarea,
-    form button {
-        width: 100%; /* Alinha o formulário à largura do dispositivo */
-    }
-
-    footer {
-        padding: 8px 0;
-        font-size: 14px;
-    }
 }
